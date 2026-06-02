@@ -1,15 +1,5 @@
 package com.github.fanziyun.util
-
-/**
- * 颜色解析工具
- * 兼容: 0xAARRGGBB, 0xRRGGBB, #RRGGBB, #AARRGGBB
- */
 object ColorUtil {
-
-    /**
-     * 解析颜色字符串为 ARGB int
-     * @return ARGB int, 失败时返回 defaultColor
-     */
     fun parseColor(colorStr: String, defaultColor: Int = 0xFFFFFFFF.toInt()): Int {
         return try {
             when {
@@ -40,7 +30,6 @@ object ColorUtil {
         }
     }
 
-    /** 类型颜色映射 */
     fun getTypeColor(type: String): Int = when (type.lowercase()) {
         "major", "重大更新" -> 0xFF5555FF.toInt()
         "minor", "功能更新" -> 0xFF55FF55.toInt()
@@ -50,7 +39,6 @@ object ColorUtil {
         else -> 0xFF888888.toInt()
     }
 
-    /** 类型显示名称 */
     fun getTypeDisplayName(type: String, chinese: Boolean = true): String = when (type.lowercase()) {
         "major", "重大更新" -> if (chinese) "重大更新" else "Major Update"
         "minor", "功能更新" -> if (chinese) "功能更新" else "Feature Update"
@@ -60,7 +48,6 @@ object ColorUtil {
         else -> type
     }
 
-    /** 类型图标 */
     fun getTypeIcon(type: String): String = when (type) {
         "major" -> "\u2605"       // ★
         "minor" -> "\u25CF"       // ●
@@ -69,8 +56,6 @@ object ColorUtil {
         "danger" -> "\u26A0"      // ⚠
         else -> "\u2022"          // •
     }
-
-    /** 判断颜色是否亮色(适用于选择白字还是黑字) */
     fun isBright(color: Int): Boolean {
         val r = (color shr 16) and 0xFF
         val g = (color shr 8) and 0xFF

@@ -13,7 +13,7 @@ function setCorsHeaders(res: VercelResponse): VercelResponse {
   return res
 }
 
-export default async function handler(
+async function handler(
   req: VercelRequest,
   res: VercelResponse,
 ): Promise<void> {
