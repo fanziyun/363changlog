@@ -70,10 +70,6 @@ object ColorUtil {
         else -> "\u2022"          // •
     }
 
-    /** 带透明度的颜色插值 */
-    fun withAlpha(color: Int, alpha: Int): Int =
-        (alpha.coerceIn(0, 255) shl 24) or (color and 0x00FFFFFF)
-
     /** 判断颜色是否亮色(适用于选择白字还是黑字) */
     fun isBright(color: Int): Boolean {
         val r = (color shr 16) and 0xFF

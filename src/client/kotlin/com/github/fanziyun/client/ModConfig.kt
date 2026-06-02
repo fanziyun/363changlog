@@ -22,9 +22,6 @@ class ModConfig : ConfigData {
     @Comment("Enable automatic update checking")
     var enableVersionCheck: Boolean = true
 
-    @Comment("Y offset of the version text on the title screen")
-    var versionYOffset: Int = 20
-
     @Comment("Display name of the external link")
     var externalLinkName: String = "项目主页"
 

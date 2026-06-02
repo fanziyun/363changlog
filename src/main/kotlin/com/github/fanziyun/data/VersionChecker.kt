@@ -56,10 +56,4 @@ object VersionChecker {
         }
     }
 
-    fun reset() {
-        isChecking = false
-        isDone = false
-        hasUpdate = false
-        latestVersion = ""
-    }
 }

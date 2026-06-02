@@ -12,7 +12,6 @@ data class ChangelogData(
     @SerializedName("entries")
     val entries: List<ChangelogEntry>? = null
 ) {
-    val footerOrEmpty: String get() = footer ?: ""
     val tagColorsOrEmpty: Map<String, String> get() = tagColors ?: emptyMap()
     val entriesOrEmpty: List<ChangelogEntry> get() = entries ?: emptyList()
 }

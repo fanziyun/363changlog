@@ -1,10 +1,9 @@
 package com.github.fanziyun.data
 
+import com.github.fanziyun.Changelog
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.github.fanziyun.Changelog
 import net.fabricmc.loader.api.FabricLoader
-import java.io.*
 import java.net.HttpURLConnection
 import java.net.URI
 import java.nio.charset.StandardCharsets
@@ -13,7 +12,6 @@ import java.nio.file.Path
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicReference
-import com.github.fanziyun.util.ColorUtil
 
 /**
  * 更新日志加载器
@@ -22,7 +20,7 @@ import com.github.fanziyun.util.ColorUtil
 object ChangelogLoader {
 
     private val gson: Gson = GsonBuilder().create()
-    private val cacheDir: Path = FabricLoader.getInstance().getGameDir().resolve(".cache")
+    private val cacheDir: Path = FabricLoader.getInstance().gameDir.resolve(".cache")
 
     @Volatile
     var isLoaded: Boolean = false
@@ -158,7 +156,7 @@ object ChangelogLoader {
                 Changelog.LOGGER.info("Changelog loaded from cache")
                 true
             } else false
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             false
         }
     }
@@ -188,15 +186,6 @@ object ChangelogLoader {
             Changelog.LOGGER.error("Failed to parse changelog JSON", e)
             null
         }
-    }
-
-    /** 清空缓存并强制重新加载 */
-    fun clearCache() {
-        try {
-            Files.deleteIfExists(cacheDir.resolve("changelog_cache.json"))
-            Files.deleteIfExists(cacheDir.resolve("changelog_cache.etag"))
-        } catch (_: Exception) {}
-        cachedEtag = ""
     }
 
     private fun createDefaultData() = ChangelogData(
