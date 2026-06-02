@@ -1,0 +1,33 @@
+{
+  "menu.changelog363.button": "更新日志",
+  "screen.changelog363.title": "整合包更新日志",
+  "screen.changelog363.date": "日期",
+  "screen.changelog363.stats": "共 %s 个版本",
+  "screen.changelog363.update_available": "新版本可用: %s",
+  "screen.changelog363.view_detail": "点击查看详情",
+  "screen.changelog363.more": "+%s条",
+  "gui.back": "返回",
+  "screen.changelog363.refresh": "刷新",
+  "screen.changelog363.refresh.tooltip": "重新获取远程更新日志",
+
+  "modmenu.nameTranslation.changelog363": "363更新日志",
+  "modmenu.descriptionTranslation.changelog363": "在标题界面与暂停界面展示整合包更新日志",
+
+  "text.autoconfig.changelog363.title": "363更新日志 配置",
+  "text.autoconfig.changelog363.option.changelogUrl": "更新日志 URL",
+  "text.autoconfig.changelog363.option.changelogUrl.@Tooltip": "远程更新日志 JSON 文件的 URL",
+  "text.autoconfig.changelog363.option.modpackVersion": "整合包版本",
+  "text.autoconfig.changelog363.option.modpackVersion.@Tooltip": "当前整合包版本号",
+  "text.autoconfig.changelog363.option.packName": "整合包名称",
+  "text.autoconfig.changelog363.option.packName.@Tooltip": "在标题界面左下角显示的整合包名称",
+  "text.autoconfig.changelog363.option.showOnTitle": "主菜单按钮",
+  "text.autoconfig.changelog363.option.showOnTitle.@Tooltip": "在主菜单显示更新日志按钮",
+  "text.autoconfig.changelog363.option.enableVersionCheck": "检查更新",
+  "text.autoconfig.changelog363.option.enableVersionCheck.@Tooltip": "启用自动检查更新",
+  "text.autoconfig.changelog363.option.versionYOffset": "版本号 Y 偏移",
+  "text.autoconfig.changelog363.option.versionYOffset.@Tooltip": "版本号在标题界面的 Y 偏移",
+  "text.autoconfig.changelog363.option.externalLinkName": "外部链接名称",
+  "text.autoconfig.changelog363.option.externalLinkName.@Tooltip": "外部链接显示名称",
+  "text.autoconfig.changelog363.option.externalLinkUrl": "外部链接 URL",
+  "text.autoconfig.changelog363.option.externalLinkUrl.@Tooltip": "外部链接 URL"
+}

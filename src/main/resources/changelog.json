@@ -1,0 +1,35 @@
+{
+  "tagColors": {
+    "新增": "0xFFFFAA00",
+    "修复": "0xFF55FF55",
+    "优化": "0xFF55AAFF"
+  },
+  "entries": [
+    {
+      "version": "1.1.0",
+      "date": "2026-06-02",
+      "title": "功能更新",
+      "type": ["minor"],
+      "tags": ["新增", "优化"],
+      "color": "0xFF55AAFF",
+      "changes": [
+        "新增底部版本号显示",
+        "新增整合包名称设置",
+        "优化界面布局"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-06-01",
+      "title": "初始版本",
+      "type": ["major"],
+      "tags": [],
+      "color": "0xFF55FF55",
+      "changes": [
+        "更新日志系统已启用",
+        "支持远程获取更新日志",
+        "支持 ETag 缓存"
+      ]
+    }
+  ]
+}
