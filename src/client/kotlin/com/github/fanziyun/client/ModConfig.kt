@@ -8,10 +8,10 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment
 class ModConfig : ConfigData {
 
     @Comment("URL of the remote changelog JSON file")
-    var changelogUrl: String = ""
+    var changelogUrl: String = "https://github.com/fanziyun/363changlog/blob/master/src/main/resources/changelog.json"
 
     @Comment("Modpack display name shown in the bottom-left of the title screen")
-    var packName: String = "363帆的原版美化"
+    var packName: String = "363 changlog"
 
     @Comment("Current modpack version number")
     var modpackVersion: String = "1.0.0"
@@ -26,5 +26,5 @@ class ModConfig : ConfigData {
     var externalLinkName: String = "项目主页"
 
     @Comment("URL of the external link")
-    var externalLinkUrl: String = "https://github.com/FanZiyun"
+    var externalLinkUrl: String = "https://github.com/fanziyun/363changlog"
 }
